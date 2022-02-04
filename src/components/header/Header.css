@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  height: auto;
+  background: #282c34;
+  display: flex;
+}
+
+.account {
+  flex: 1;
+  color: white;
+}
+
+.money {
+  flex: 1;
+  color: white;
+}

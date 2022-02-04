@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# In this project you can see how to use react-web3 library and etherprojects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have some problems with using hooks from ethers project anf react-web3, but in this project you can see how to use hooks instead vanila ethers and web3js.
+
+
+just go in folder requests and look at my code. Also you can go to folder components and look at my provider.
+
+Also i make some hooks for blocks and balance.
 
 ## Available Scripts
 

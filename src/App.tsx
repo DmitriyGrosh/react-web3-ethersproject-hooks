@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
+import Provider from "./components/provider/Provider";
+
 import './App.css';
+import Header from "./components/header/Header";
+import RequestsWithHooks from "./view/requests/RequestsWithHooks";
+import RequestsWithoutHooks from "./view/requests/RequestsWithoutHooks";
 
 function App() {
+  const [changeRequests, setChangeRequests] = useState<boolean>(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider>
+      <div className="App">
+        <Header />
+        <button onClick={() => setChangeRequests(!changeRequests)}>Change requests</button>
+        {changeRequests ? <RequestsWithHooks/> : <RequestsWithoutHooks />}
+      </div>
+    </Provider>
   );
 }
 
